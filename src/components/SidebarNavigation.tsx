@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaCodepen, FaInstagram } from 'react-icons/fa';
-import { SiGumroad } from 'react-icons/si';
 
 type SidebarNavigationProps = {
     activeNav: string;

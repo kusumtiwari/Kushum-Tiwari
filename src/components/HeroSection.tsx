@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaEnvelope, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { SiGumroad } from 'react-icons/si';
 import SidebarNavigation from './SidebarNavigation';
 
 type HeroSectionProps = {
@@ -64,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ activeNav, setActiveNav }) =>
                     </h2>
                     <h3 className="text-xl text-gray-300 ">
                          I build accessible, pixel-perfect digital experiences for the web.
-                        A seasoned <span className="text-primary">Frontend Developer</span> transforming ideas into stunning digital experiences. Let's create something amazing!
+                        A seasoned <span className="text-primary">Frontend Developer</span> transforming ideas into stunning digital experiences. Lets create something amazing!
                     </h3>
                    <SidebarNavigation activeNav={activeNav} setActiveNav={setActiveNav}/>
                     {/* Social Icons */}

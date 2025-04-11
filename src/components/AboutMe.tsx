@@ -51,7 +51,7 @@ const AboutMe = () => {
                 variants={itemVariants}
                 className="text-gray-300 text-lg my-4"
             >
-                Whether you're looking to launch a new product, revamp an existing website, or build a complex web application, I have the skills and experience to bring your vision to life.
+                Whether you are looking to launch a new product, revamp an existing website, or build a complex web application, I have the skills and experience to bring your vision to life.
             </motion.p>
 
             <motion.p
