@@ -14,31 +14,47 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ activeNav, setAct
             {/* Navigation Links */}
             <div className="flex flex-col space-y-6">
                 <div className="flex items-center cursor-pointer" onClick={() => setActiveNav('ABOUT')}>
-                    <div className={`w-16 h-0.5 ${activeNav === 'ABOUT' ? 'bg-white' : 'bg-gray-500'} mr-4`}></div>
+                    <div
+                        className={`
+            h-0.5 
+            ${activeNav === 'ABOUT' ? 'bg-white w-16' : 'bg-gray-500 w-8'}
+            mr-4 
+            transition-all duration-300 ease-in-out
+        `}
+                    ></div>
                     <span className={`uppercase font-medium ${activeNav === 'ABOUT' ? 'text-white' : 'text-gray-500'}`}>
                         About
                     </span>
                 </div>
 
                 <div className="flex items-center cursor-pointer" onClick={() => setActiveNav('EXPERIENCE')}>
-                    <div className={`w-12 h-0.5 ${activeNav === 'EXPERIENCE' ? 'bg-white' : 'bg-gray-500'} mr-4`}></div>
+                    <div
+                        className={`
+            h-0.5 
+            ${activeNav === 'EXPERIENCE' ? 'bg-white w-16' : 'bg-gray-500 w-8'} 
+            mr-4 
+            transition-all duration-300 ease-in-out
+        `}
+                    ></div>
                     <span className={`uppercase font-medium ${activeNav === 'EXPERIENCE' ? 'text-white' : 'text-gray-500'}`}>
                         Experience
                     </span>
                 </div>
-{/* 
-                <div className="flex items-center cursor-pointer" onClick={() => setActiveNav('PROJECTS')}>
-                    <div className={`w-12 h-0.5 ${activeNav === 'PROJECTS' ? 'bg-white' : 'bg-gray-500'} mr-4`}></div>
-                    <span className={`uppercase font-medium ${activeNav === 'PROJECTS' ? 'text-white' : 'text-gray-500'}`}>
-                        Projects
-                    </span>
-                </div> */}
+
                 <div className="flex items-center cursor-pointer" onClick={() => setActiveNav('SKILLS')}>
-                    <div className={`w-12 h-0.5 ${activeNav === 'PROJECTS' ? 'bg-white' : 'bg-gray-500'} mr-4`}></div>
-                    <span className={`uppercase font-medium ${activeNav === 'PROJECTS' ? 'text-white' : 'text-gray-500'}`}>
+                    <div
+                        className={`
+            h-0.5 
+            ${activeNav === 'SKILLS' ? 'bg-white w-16' : 'bg-gray-500 w-8'} 
+            mr-4 
+            transition-all duration-300 ease-in-out
+        `}
+                    ></div>
+                    <span className={`uppercase font-medium ${activeNav === 'SKILLS' ? 'text-white' : 'text-gray-500'}`}>
                         Skills
                     </span>
                 </div>
+
             </div>
 
         </div>
