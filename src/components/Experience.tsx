@@ -142,12 +142,12 @@ const Experience = () => {
                                         transition={{ delay: index * 0.4 + 0.2, duration: 0.3 }}
                                     >
                                         {experience.role} • {experience.company}
-                                        <motion.span
+                                        {/* <motion.span
                                             whileHover={{ rotate: 45 }}
                                             transition={{ duration: 0.2 }}
                                         >
                                             <ExternalLink size={16} className="text-gray-400" />
-                                        </motion.span>
+                                        </motion.span> */}
                                     </motion.h3>
 
                                     <motion.p

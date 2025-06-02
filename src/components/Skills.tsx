@@ -44,7 +44,6 @@ const Skills = () => {
             { name: 'Git, Github, GitLab', level: 85 },
             { name: 'Webpack', level: 80 },
             { name: 'Figma', level: 75 },
-            { name: 'Jest', level: 70 },
             { name: 'CI/CD Pipeline & Docker', level: 65 },
         ]
     }
