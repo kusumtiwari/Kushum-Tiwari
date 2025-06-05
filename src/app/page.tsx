@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Right Side - Conditional Component Rendering */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 md:max-h-[80vh] overflow-y-scroll no-scrollbar">
         {activeNav === "ABOUT" ? (
           <AboutMe />
         ) : activeNav === "EXPERIENCE" ? (
