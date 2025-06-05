@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Experience = () => {
@@ -73,19 +72,19 @@ const Experience = () => {
     };
 
     return (
-        <div className="text-gray-300 p-8 h-full">
+        <div className="text-gray-300 p-4 md:p-8 h-full w-full">
             <div className="max-w-4xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl font-bold mb-6 text-white"
+                    className="text-xl md:text-2xl font-bold mb-6 text-white text-center md:text-left"
                 >
                     Experience
                 </motion.h2>
 
                 <motion.div
-                    className="space-y-8"
+                    className="space-y-10"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -93,17 +92,12 @@ const Experience = () => {
                     {experiences.map((experience, index) => (
                         <motion.div
                             key={index}
-                            className="grid grid-cols-12 gap-4"
+                            className="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 rounded-lg hover:bg-zinc-800/30 transition-all"
                             variants={experienceVariants}
-                            whileHover={{
-                                backgroundColor: "rgba(38, 38, 38, 0.3)",
-                                borderRadius: "0.5rem",
-                                transition: { duration: 0.2 }
-                            }}
                         >
                             {/* Left side - Timeline */}
                             <motion.div
-                                className="col-span-3 text-gray-400 font-medium relative pl-4 pt-2"
+                                className="md:col-span-3 text-gray-400 font-medium relative pl-4 pt-2"
                                 variants={itemVariants}
                             >
                                 {/* Timeline dot */}
@@ -125,29 +119,22 @@ const Experience = () => {
                                     />
                                 )}
 
-                                {experience.period}
+                                <div className="text-sm">{experience.period}</div>
                             </motion.div>
 
                             {/* Right side - Job Details */}
                             <motion.div
-                                className="col-span-9 pt-2"
+                                className="md:col-span-9 pt-2"
                                 variants={itemVariants}
                             >
-                                {/* Title and Company */}
                                 <motion.div className="mb-4">
                                     <motion.h3
-                                        className="text-lg font-bold text-primary flex items-center gap-2 mb-1"
+                                        className="text-base md:text-lg font-bold text-primary flex items-center gap-2 mb-1"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: index * 0.4 + 0.2, duration: 0.3 }}
                                     >
                                         {experience.role} • {experience.company}
-                                        {/* <motion.span
-                                            whileHover={{ rotate: 45 }}
-                                            transition={{ duration: 0.2 }}
-                                        >
-                                            <ExternalLink size={16} className="text-gray-400" />
-                                        </motion.span> */}
                                     </motion.h3>
 
                                     <motion.p
@@ -159,13 +146,16 @@ const Experience = () => {
                                         {experience.location}
                                     </motion.p>
 
-                                    <motion.ul className="list-disc pl-5 space-y-2">
+                                    <motion.ul className="list-disc pl-5 space-y-2 text-sm">
                                         {experience.description.map((item, i) => (
                                             <motion.li
                                                 key={i}
                                                 initial={{ opacity: 0, x: -5 }}
                                                 animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: index * 0.4 + 0.4 + (i * 0.1), duration: 0.3 }}
+                                                transition={{
+                                                    delay: index * 0.4 + 0.4 + i * 0.1,
+                                                    duration: 0.3
+                                                }}
                                             >
                                                 {item}
                                             </motion.li>
