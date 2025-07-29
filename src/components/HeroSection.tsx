@@ -61,10 +61,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ activeNav, setActiveNav }) =>
                             |
                         </motion.span>
                     </h2>
-                    <h3 className="text-xl text-gray-300 ">
-                         I build accessible, pixel-perfect digital experiences for the web.
-                        A seasoned <span className="text-primary">Frontend Developer</span> transforming ideas into stunning digital experiences. Lets create something amazing!
-                    </h3>
+            <h3 className="text-xl text-gray-300">
+                Crafting sleek, accessible, and high-performance web interfaces is my passion.
+                As a <span className="text-primary">Frontend Developer</span>, I turn creative ideas into visually striking and user-friendly experiences. Let’s build something exceptional together!
+            </h3>
+
                    <SidebarNavigation activeNav={activeNav} setActiveNav={setActiveNav}/>
                     {/* Social Icons */}
                     <div className="flex gap-4 justify-center md:justify-start">

@@ -15,26 +15,7 @@ const Projects = () => {
                 "Styled using TailwindCSS and shadcn/ui.",
             ],
         },
-        {
-            name: "JMI Looks",
-            url: "https://www.jmilooks.com/",
-            stack: ["Next.js", "Supabase", "shadcn/ui"],
-            description: [
-                "Modern ecommerce frontend tailored for fashion and beauty.",
-                "Backend built using Supabase.",
-                "UI components styled with shadcn/ui and TailwindCSS.",
-            ],
-        },
-        {
-            name: "My Ecommerce (Internship)",
-            url: "https://my-ecommerce-silk.vercel.app/",
-            stack: ["React", "TailwindCSS"],
-            description: [
-                "Static ecommerce website built during internship period.",
-                "Showcases product grid, responsive layout, and UI animations.",
-                "Focused on clean design using TailwindCSS.",
-            ],
-        },
+    
     ];
 
     const portfolioProject = {
@@ -52,12 +33,13 @@ const Projects = () => {
         {
             name: "Orbit360 Dashboard",
             url: null, // Private domain
-            stack: ["React", "TypeScript", "Zustand", "TanStack Query", "Ant Design"],
+            stack: ["React", "TypeScript", "Zustand", "TanStack Query", "Ant Design","Redux", "Tailwind"],
             description: [
                 "Feature-rich SaaS admin dashboard for internal operations.",
-                "Real-time reporting with dynamic data fetches.",
+                "Real-time reports generation with web socket integration",
                 "User module with fine-grained role-based controls.",
                 "Live chat UI with automated workflows.",
+                "Facebook Meta Business API Integration",
                 "Custom form builder with drag-and-drop support.",
                 "Designed for high performance, usability, and seamless real-time interactivity.",
             ],
@@ -88,7 +70,46 @@ const Projects = () => {
                 >
                     Projects
                 </motion.h2>
-
+                {/* SaaS Projects */}
+                <motion.div
+                className="mb-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                >
+                    <h3 className="text-xl font-semibold text-primary mb-4 mt-4">SaaS Platforms</h3>
+                    <div className="space-y-6">
+                        {saasProjects.map((project, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="bg-zinc-800/30 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                                whileHover={{ scale: 1.02 }}
+                            >
+                                <div className="flex items-center justify-between mb-3">
+                                    <h4 className="text-lg font-bold text-white">{project.name}</h4>
+                                    {project.url && (
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-400 hover:text-primary transition"
+                                        >
+                                            <ExternalLink size={18} />
+                                        </a>
+                                    )}
+                                </div>
+                                <p className="text-sm text-gray-400 mb-3">
+                                    Tech Stack: {project.stack.join(", ")}
+                                </p>
+                                <ul className="list-disc pl-5 text-sm space-y-2">
+                                    {project.description.map((point, i) => (
+                                        <li key={i}>{point}</li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
                 {/* Ecommerce Projects */}
                 <motion.div
                     className="mb-10"
@@ -164,45 +185,7 @@ const Projects = () => {
                     </motion.div>
                 </motion.div>
 
-                {/* SaaS Projects */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
-                >
-                    <h3 className="text-xl font-semibold text-primary mb-4">SaaS Platforms</h3>
-                    <div className="space-y-6">
-                        {saasProjects.map((project, idx) => (
-                            <motion.div
-                                key={idx}
-                                className="bg-zinc-800/30 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-                                whileHover={{ scale: 1.02 }}
-                            >
-                                <div className="flex items-center justify-between mb-3">
-                                    <h4 className="text-lg font-bold text-white">{project.name}</h4>
-                                    {project.url && (
-                                        <a
-                                            href={project.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-gray-400 hover:text-primary transition"
-                                        >
-                                            <ExternalLink size={18} />
-                                        </a>
-                                    )}
-                                </div>
-                                <p className="text-sm text-gray-400 mb-3">
-                                    Tech Stack: {project.stack.join(", ")}
-                                </p>
-                                <ul className="list-disc pl-5 text-sm space-y-2">
-                                    {project.description.map((point, i) => (
-                                        <li key={i}>{point}</li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
+               
             </div>
         </div>
     );

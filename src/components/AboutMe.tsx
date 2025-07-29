@@ -44,7 +44,7 @@ const AboutMe = () => {
                 variants={itemVariants}
                 className="text-gray-300 text-lg"
             >
-                I specialize in creating responsive, user-friendly web applications using modern technologies like React, Next.js, and Tailwind CSS. With a keen eye for design and a passion for clean code, I build digital experiences that not only look great but also perform exceptionally well.
+                I specialize in creating responsive, user-friendly web applications using modern technologies like React, Next.js, TypeScript and Tailwind CSS. With a keen eye for design and a passion for clean code, I build digital experiences that not only look great but also perform exceptionally well.
             </motion.p>
 
             <motion.p

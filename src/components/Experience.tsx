@@ -9,9 +9,10 @@ const Experience = () => {
             company: "Ekganti Services",
             location: "Kathmandu, Nepal",
             description: [
-                "Led the development and setup of a comprehensive CRM application, independently handling the entire frontend architecture.",
-                "Mentored and assisted interns in their development tasks, fostering their growth in frontend technologies.",
-                "Demonstrated a deep understanding of frontend development, delivering high-quality, user-centric solutions."
+                "Architected and developed the frontend of an omnichannel customer management platform from scratch, delivering features like lead management, ticketing, live chat, and real-time reporting via WebSockets.",
+                "Integrated third-party services including Facebook Meta Business API, enhancing multichannel communication capabilities.",
+                "Collaborated with backend teams and guided interns through hands-on mentorship, promoting best practices in React, TypeScript, and state management tools.",
+                "Contributed to a high-impact CRM solution designed for customer support teams, marketing workflows, and channel broadcasting across platforms."
             ],
         },
         {

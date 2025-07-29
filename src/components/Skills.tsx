@@ -20,31 +20,31 @@ const Skills = () => {
 
     const skillCategories: SkillCategories = {
         frontend: [
-            { name: 'HTML/CSS (Tailwind CSS, Bootstrap, MUI)', level: 90 },
-            { name: 'ReactJs & Next Js', level: 90 },
-            { name: 'JavaScript & TypeScript', level: 95 },
-            { name: 'Figma', level: 85 },
-            { name: 'ShandcnUI, Antd', level: 88 },
+            { name: 'HTML/CSS (Tailwind CSS, Bootstrap, MUI)', level: 100 },
+            { name: 'ReactJs & Next Js', level: 100 },
+            { name: 'JavaScript & TypeScript', level: 100 },
+            { name: 'Framer Motion', level: 78 },
+            { name: 'ShandcnUI, Antd', level: 100 },
         ],
         state: [
-            { name: 'Redux', level: 85 },
-            { name: 'Zustand', level: 80 },
-            { name: 'React Query/TanStack Query', level: 82 },
-            { name: 'Context API', level: 88 },
-            { name: 'Framer Motion', level: 78 },
+            { name: 'Redux', level: 100 },
+            { name: 'Zustand', level: 100 },
+            { name: 'React Query/TanStack Query', level: 100 },
+            { name: 'Context API', level: 100 },
+   
         ],
         backend: [
             { name: 'Node.js', level: 80 },
             { name: 'Express', level: 75 },
             { name: 'MongoDB', level: 70 },
             { name: 'REST API', level: 85 },
-            { name: 'GraphQL', level: 65 },
+            { name: 'Python Django', level: 65 },
         ],
         tools: [
             { name: 'Git, Github, GitLab', level: 85 },
             { name: 'Webpack', level: 80 },
-            { name: 'Figma', level: 75 },
-            { name: 'CI/CD Pipeline & Docker', level: 65 },
+            // { name: 'Figma', level: 75 },
+            { name: 'CI/CD Pipeline & Docker', level: 40 },
         ]
     }
 
